@@ -16,8 +16,7 @@ convert_to_hapmap(data, snp_info)
   "0" = homozygous for reference allele, "2" = homozygous for alternative allele, "1" = heterozygous.
 %%     ~~Describe \code{x} here~~
 }
-\item{x}{A data frame containing SNP information such as the SNP names, reference allele (Ref), and alternate allele (Alt) for each SNP.
-The SNP names in this data frame should match the column names of the data matrix. This information is used to determine the reference and alternate alleles for each SNP when converting the numerical data to hapmap format.
+\item{snp_info}{A data frame containing SNP information such as the SNP names, reference allele (Ref), and alternate allele (Alt) for each SNP. The SNP names in this data frame should match the column names of the data matrix. This information is used to determine the reference and alternate alleles for each SNP when converting the numerical data to hapmap format.
 %%     ~~Describe \code{x} here~~
 }
 }
