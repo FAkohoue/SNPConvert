@@ -1,5 +1,5 @@
 # SNPConvert
-This R package is a collection of useful functions to facilitate Exploratory data analysis (EDA) in R software. It also includes a function to rearrange columns and perform full join on multi-environment trial datasets to obtain a single dataset for downstream analysis.
+An R package which uses basic R functions and constructs to convert a matrix of numerical SNP data into hapmap format based on the SNP information provided.
 
 # Installation in R
 # Install devtools
