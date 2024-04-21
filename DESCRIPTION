@@ -1,0 +1,10 @@
+Package: SNPConvert
+Type: Package
+Title: Convert SNP from numeric (0, 1, 2) format to hampmap
+Version: 0.1.0
+Author: Félicien Akohoue
+Maintainer: The package maintainer <akohoue.f@gmail.com>
+Description: This function uses basic R functions and constructs to convert a matrix of numerical SNP data into hapmap format based on the SNP information provided.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
