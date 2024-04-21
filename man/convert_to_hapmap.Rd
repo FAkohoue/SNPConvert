@@ -1,7 +1,7 @@
 \name{convert_to_hapmap}
 \alias{convert_to_hapmap}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Convert SNP from numeric (0, 1, 2) format to hampmap
+\title{Convert SNP from numeric (0, 1, 2) format to hapmap
 %%  ~~function to do ... ~~
 }
 \description{This function uses basic R functions and constructs to convert a matrix of numerical SNP data into hapmap format based on the SNP information provided.

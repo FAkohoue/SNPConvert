@@ -1,6 +1,6 @@
 Package: SNPConvert
 Type: Package
-Title: Convert SNP from numeric (0, 1, 2) format to hampmap
+Title: Convert SNP from numeric (0, 1, 2) format to hapmap
 Version: 0.1.0
 Author: Félicien Akohoue
 Maintainer: The package maintainer <akohoue.f@gmail.com>
