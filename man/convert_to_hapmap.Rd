@@ -13,10 +13,10 @@ convert_to_hapmap(data, snp_info)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{data}{A data frame of SNP coded as 0, 1, 2, where each row corresponds to an individual and each column corresponds to a SNP.
-  "0" = homozygous for reference allele, "2" = homozygous for alternative allele, "1" = heterozygous.
+  "0" = homozygous for reference allele, "1" = homozygous for alternative allele, "2" = heterozygous.
 %%     ~~Describe \code{x} here~~
 }
-\item{snp_info}{A data frame containing SNP information such as the SNP names, reference allele (Ref), and alternate allele (Alt) for each SNP. The SNP names in this data frame should match the column names of the data matrix. This information is used to determine the reference and alternate alleles for each SNP when converting the numerical data to hapmap format.
+\item{snp_info}{A data frame containing SNP information such as the SNP names, reference allele (REF), and alternate allele (ALT) for each SNP. The SNP names in this data frame should match the column names of the data matrix. This information is used to determine the reference and alternate alleles for each SNP when converting the numerical data to hapmap format.
 %%     ~~Describe \code{x} here~~
 }
 }
@@ -50,8 +50,8 @@ numerical_data <- matrix(sample(0:2, 725*299, replace = TRUE), nrow = 299, ncol 
 colnames(numerical_data) <- paste0("SNP", 1:725)  # Assign column names to numerical data
 Sample second dataset containing SNP information
 snp_info <- data.frame(SNP = paste0("SNP", 1:725),
-                    Ref = sample(c("A", "C", "G", "T"), 725, replace = TRUE),
-                     Alt = sample(c("A", "C", "G", "T"), 725, replace = TRUE))
+                    REF = sample(c("A", "C", "G", "T"), 725, replace = TRUE),
+                     ALT = sample(c("A", "C", "G", "T"), 725, replace = TRUE))
 rownames(snp_data) <- snp_info$SNP  # Assign SNP names as row names
 
 ##---- Should be DIRECTLY executable !! ----
@@ -73,11 +73,11 @@ convert_to_hapmap <- function(data, snp_info) {
       if (is.na(data[i, j])) {
         hapmap_data[i, j] <- "NA"
       } else if (data[i, j] == 0) {
-        hapmap_data[i, j] <- paste0(snp_info$Ref[j], "", snp_info$Ref[j])
+        hapmap_data[i, j] <- paste0(snp_info$REF[j], "", snp_info$REF[j])
       } else if (data[i, j] == 2) {
-        hapmap_data[i, j] <- paste0(snp_info$Alt[j], "", snp_info$Alt[j])
+        hapmap_data[i, j] <- paste0(snp_info$ALT[j], "", snp_info$ALT[j])
       } else if (data[i, j] == 1) {
-        hapmap_data[i, j] <- paste0(snp_info$Ref[j], "", snp_info$Alt[j])
+        hapmap_data[i, j] <- paste0(snp_info$REF[j], "", snp_info$ALT[j])
       } else {
         hapmap_data[i, j] <- "NA"
       }
