@@ -4,7 +4,7 @@ An R package which uses basic R functions and constructs to convert a matrix of 
 # Installation in R
 # Install devtools
 devtools::install_github("hadley/devtools")
-# Install EasyExplore
+# Install SNPConvert
 devtools::install_github("FAkohoue/SNPConvert")
 
 # License
